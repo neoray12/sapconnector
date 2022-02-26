@@ -17,7 +17,7 @@ http://www.mulesoft.org/schema/mule/s4hana http://www.mulesoft.org/schema/mule/s
 		<s4hana:basic-authentication-connection username="MULE01" password="mule2015" baseUrl="http://sapidp.demos.mulesoft.com:8000" cacheEntryTtlTimeUnit="SECONDS" edmExpirationIntervalTimeUnit="NANOSECONDS" />
 	</s4hana:config>
 	<flow name="sapconnectorFlow_PoDetail_sRFC" doc:id="bf380374-f947-4bc3-8152-b1803a5182db" >
-		<http:listener doc:name="Listener" doc:id="0a7bc440-f2be-42b8-a633-756b04bce57f" config-ref="HTTP_Listener_config" path="/RFC/PoDetail"/>
+		<http:listener doc:name="Listener" doc:id="0a7bc440-f2be-42b8-a633-756b04bce57f" config-ref="HTTP_Listener_config" path="/RFC/PoDetail" doc:description="Adding notes"/>
 		<ee:transform doc:name="Transform Message" doc:id="5bd1e79e-537e-4679-bce3-a30b2a3f117a" >
 			<ee:message >
 				<ee:set-payload ><![CDATA[%dw 2.0
